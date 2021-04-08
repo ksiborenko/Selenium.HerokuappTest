@@ -66,6 +66,8 @@ public class Main {
         this.driver.get("https://ultimateqa.com/simple-html-elements-for-automation");
         String search = this.driver.findElement(By.id("simpleElementsLink")).getAttribute("href");
         assertEquals("https://ultimateqa.com/link-success", search);
+        String backgroundOrigin = this.driver.findElement(By.id("simpleElementsLink")).getCssValue("background-origin");
+        assertEquals("padding-box", backgroundOrigin);
     }
 
 
